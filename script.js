@@ -8,7 +8,7 @@ let select = document.getElementById("select-moedas")
 
 
 async function converterMoedas() {
-
+    
     let moedas = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL").then(function (resposta) {
         return resposta.json()
     })
@@ -19,23 +19,35 @@ async function converterMoedas() {
     let inputValorEmReais = Number(document.querySelector('#input').value)
     let inputMoedas = document.getElementById("input-moedas")
     let textoReal = document.getElementById("texto-real")
+        
 
-    if (select.value === "US$ Dólar Americano") {
-        let ValorEmDolares = inputValorEmReais / dolar
-        inputMoedas.innerHTML = ValorEmDolares.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+    if (inputValorEmReais !== 0) {
+        if (select.value === "US$ Dólar Americano") {
+            let ValorEmDolares = inputValorEmReais / dolar
+            inputMoedas.innerHTML = ValorEmDolares.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+        }
+    
+    
+        if (select.value === "€ Euro") {
+            let valorEmEuros = inputValorEmReais / euro
+            inputMoedas.innerHTML = valorEmEuros.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })
+        }
+    
+        textoReal.innerHTML = inputValorEmReais.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        ocultar();
+    } else {
+        alert('O valor tem que ser diferente de zero 😅')
     }
-
-
-    if (select.value === "€ Euro") {
-        let valorEmEuros = inputValorEmReais / euro
-        inputMoedas.innerHTML = valorEmEuros.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })
-    }
-
-    textoReal.innerHTML = inputValorEmReais.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-    console.log()
+    
 }
 
-function trocaDeMoeda() {
+function ocultar() {
+    document.getElementById("paragrafo-pseudo").style.display="none";
+    document.getElementById("paragrafo-pseudo2").style.display="none";
+}
+
+function trocaDeMoeda(event) {
+    event.preventDefault();
 
     let textoMoedas = document.getElementById("texto-moedas")
     let bandeiraMoedas = document.getElementById("bandeira-moedas")

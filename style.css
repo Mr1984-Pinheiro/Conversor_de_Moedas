@@ -5,93 +5,97 @@
   box-sizing: border-box;
 }
 
-#page {
-  margin: 15px auto;
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-}
-
 body {
-  background-color: rgba(143, 97, 97, 0.76);
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 2rem;
 }
 
-#cabeçalho {
-  width: 375px;
-  height: 66px;
+.page {
+  height: 100%;
+  width: 21.875rem;
+}
 
-  background: #9657a5;
+@media (max-width: 359px) {
+    .page {
+      width: 17.5rem;
+    }
+}
+
+#cabeçalho {  
+  height: 4.125rem;
+  background: #7a946879;
 }
 h1 {
   color: #f4f4f4;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 #caixa-principal {
   background: #e5e5e5;
-  width: 375px;
-  padding: 24px;
+  padding: 1.5rem;
 }
 .paragrafo {
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   /* identical to box height, or 129% */
   color: #777777;
 }
 .select {
   background: #ffffff;
-  border: 1px solid #bbbbbb;
-  border-radius: 4px;
-  height: 48px;
-  width: 327px;
-  margin-bottom: 23px;
+  border: 0.0625rem solid #bbbbbb;
+  border-radius: 0.25rem;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 1.4375rem;
   appearance: none;
   outline: none;
   cursor: pointer;
-  padding-left: 16px;
-  font-size: 16px;
+  padding-left: 1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 #input {
-  height: 48px;
-  width: 327px;
+  height: 3rem;
+  width: 100%;
   background: #ffffff;
-  border: 1px solid #bbbbbb;
-  border-radius: 4px;
-  margin-bottom: 23px;
+  border: 0.0625rem solid #bbbbbb;
+  border-radius: 0.25rem;
+  margin-bottom: 1.4375rem;
   outline: none;
-  padding-left: 16px;
-  font-size: 16px;
+  padding-left: 1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 #botao {
-  background: #cdd728;
-  border-radius: 25px;
+  background: #6da544;
+  border-radius: 1.5625rem;
   display: block;
-  height: 48px;
-  width: 327px;
+  height: 3rem;
+  width: 100%;
   cursor: pointer;
   border: none;
-  margin-bottom: 23px;
+  margin-bottom: 1.4375rem;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #f4f4f4;
   outline: none;
 }
 
-#botao:active {
-  opacity: 0.6;
+#botao:hover {
+  opacity: 0.9;
 }
 
 #caixa-interna {
-  border: 1px solid #9657a5;
-  border-radius: 4px;
-  padding-top: 12px;
+  border: 0.0625rem solid #6da544;
+  border-radius: 0.25rem;
+  padding-top: 0.75rem;
   padding-bottom: 12px;
 }
 
@@ -103,12 +107,18 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
   filter: contrast(200%);
+}
+
+.paragrafo-pseudo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: transparent;
 }
 
 .paragrafo-negrito {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
 }

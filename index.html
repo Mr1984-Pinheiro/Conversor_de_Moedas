@@ -2,11 +2,11 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />    
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,500&display=swap"
       rel="stylesheet"
@@ -14,7 +14,7 @@
     <title>Conversor de Moedas</title>
   </head>
   <body>
-    <div id="page">
+    <div class="page" id="page">
       <div id="cabeçalho">
         <h1>Conversor de Moedas</h1>
       </div>
@@ -28,8 +28,10 @@
           <option>US$ Dólar Americano</option>
           <option>€ Euro</option>
         </select>
+        <form action="">
         <p class="paragrafo"><b>Valor</b></p>
-        <input id="input" placeholder="Digite o valor " type="number" />
+        <input  id="input" placeholder="Digite o valor" type="number" />
+        </form>
         <button id="botao">Converter</button>
 
         <div id="caixa-interna">
@@ -37,6 +39,7 @@
             <img src="./img/brasil.png" alt="Baneira  do Brasil" />
             <p class="paragrafo">Real</p>
             <p class="paragrafo-negrito" id="texto-real"></p>
+            <div class="paragrafo-pseudo" ><p id="paragrafo-pseudo">1</p></div>
           </div>
 
           <img id="seta" src="./img/seta.png" alt="Seta de Converção" />
@@ -49,6 +52,7 @@
             />
             <p class="paragrafo" id="texto-moedas">Dólar Americano</p>
             <p class="paragrafo-negrito" id="input-moedas"></p>
+            <div class="paragrafo-pseudo" ><p id="paragrafo-pseudo2">1</p></div>
           </div>
         </div>
       </div>
